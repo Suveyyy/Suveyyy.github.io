@@ -5,13 +5,17 @@
   
 
   
-  <title>Hexo</title>
+  <title>JavaScript之正则表达式的详细介绍 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://example.com/index.html">
+  <meta name="description" content="如果你还不会正则表达式，看了这一篇文章就可以了！！先来看一些基础语法    表达式 描述    “^The” 表示所有以”The”开头的字符串   “of despair$” 表示所有以”of despair”结尾的字符串   “^abc$” 表示开始和结尾都是”abc”的字符串——呵呵，只有”abc”自己了   “notice” 表示任何包含”notice”的字符串   “ * “表示没有或多个">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JavaScript之正则表达式的详细介绍">
+<meta property="og:url" content="http://example.com/2023/02/20/JavaScript%E4%B9%8B%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E7%9A%84%E8%AF%A6%E7%BB%86%E4%BB%8B%E7%BB%8D/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="如果你还不会正则表达式，看了这一篇文章就可以了！！先来看一些基础语法    表达式 描述    “^The” 表示所有以”The”开头的字符串   “of despair$” 表示所有以”of despair”结尾的字符串   “^abc$” 表示开始和结尾都是”abc”的字符串——呵呵，只有”abc”自己了   “notice” 表示任何包含”notice”的字符串   “ * “表示没有或多个">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2023-02-20T06:58:40.000Z">
+<meta property="article:modified_time" content="2023-02-20T07:17:37.987Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
   
@@ -62,9 +66,7 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-JavaScript之正则表达式的详细介绍" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-JavaScript之正则表达式的详细介绍" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2023/02/20/JavaScript%E4%B9%8B%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E7%9A%84%E8%AF%A6%E7%BB%86%E4%BB%8B%E7%BB%8D/" class="article-date">
   <time datetime="2023-02-20T06:58:40.000Z" itemprop="datePublished">2023-02-20</time>
@@ -77,8 +79,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2023/02/20/JavaScript%E4%B9%8B%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E7%9A%84%E8%AF%A6%E7%BB%86%E4%BB%8B%E7%BB%8D/">JavaScript之正则表达式的详细介绍</a>
+    <h1 class="article-title" itemprop="name">
+      JavaScript之正则表达式的详细介绍
     </h1>
   
 
@@ -205,92 +207,19 @@
     </footer>
   </div>
   
-</article>
-
-
+    
+<nav id="article-nav">
   
-    <article id="post-JavaScript-copyWithin-方法" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2023/02/20/JavaScript-copyWithin-%E6%96%B9%E6%B3%95/" class="article-date">
-  <time datetime="2023-02-20T03:21:22.000Z" itemprop="datePublished">2023-02-20</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2023/02/20/JavaScript-copyWithin-%E6%96%B9%E6%B3%95/">JavaScript copyWithin()方法</a>
-    </h1>
+    <a href="/2023/02/20/JavaScript-copyWithin-%E6%96%B9%E6%B3%95/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">JavaScript copyWithin()方法</div>
+    </a>
   
+</nav>
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h5 id="copyWithin-方法用于从数组的指定位置拷贝元素到数组的另一个指定位置中。"><a href="#copyWithin-方法用于从数组的指定位置拷贝元素到数组的另一个指定位置中。" class="headerlink" title="copyWithin() 方法用于从数组的指定位置拷贝元素到数组的另一个指定位置中。"></a><strong>copyWithin() 方法用于从数组的指定位置拷贝元素到数组的另一个指定位置中。</strong></h5><h4 id="语法：array-copyWithin-target-start-end"><a href="#语法：array-copyWithin-target-start-end" class="headerlink" title="语法：array.copyWithin(target, start, end)"></a>语法：array.copyWithin(target, start, end)</h4><table>
-<thead>
-<tr>
-<th align="left">参数</th>
-<th align="left">描述</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left">target</td>
-<td align="left">必需，复制到的索引位置</td>
-</tr>
-<tr>
-<td align="left">start</td>
-<td align="left">可选，默认为0，从这个索引号开始复制</td>
-</tr>
-<tr>
-<td align="left">end</td>
-<td align="left">可选，默认为arr.length,复制结束的位置，不包括这个索引</td>
-</tr>
-</tbody></table>
-<p>首先，我们要清楚它是对源数组进行修改的，不改变原数组的长度，看例子就很一目了然了。</p>
-<p><code>let array = [1, 2, 3, 4, 5, 6]</code></p>
-<p>（三个参数）示例1：</p>
-<ul>
-<li><p><strong>复制的元素</strong>：索引3到5的元素，包含3不包含5—&gt;4, 5</p>
-</li>
-<li><p><strong>放到哪里</strong>：把4，5放到索引为0的位置，4，5占了原来1，2的位置，所以没了1，2元素，其他没被占的元素按原来的位置放</p>
-</li>
-</ul>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">array.copyWithin(0, 3, 5)</span><br><span class="line">// [4， 5， 3，4， 5， 6]</span><br></pre></td></tr></table></figure>
-<p>（两个参数）示例2：</p>
-<ul>
-<li><p><strong>复制的元素</strong>：从0到6， —&gt;1, 2, 3, 4, 5</p>
-</li>
-<li><p><strong>放到哪里</strong>：索引为2的位置上</p>
-</li>
-</ul>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">target: 2,  start: 0,  end: array.length </span><br><span class="line">array.copyWithin(2， 0)</span><br><span class="line">// [1， 2， 1， 2， 3， 4]</span><br></pre></td></tr></table></figure>
-<p>（有负数）示例3：</p>
-<ul>
-<li><p><strong>复制的元素</strong>：从-1到-3 —&gt; 4, 5</p>
-</li>
-<li><p><strong>放到哪里</strong>：索引为2的位置上</p>
-</li>
-</ul>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">// -1 是最后一个元素</span><br><span class="line">array.copyWithin(2, -3, -1)</span><br><span class="line">// [1， 2， 4， 5， 5， 6]</span><br></pre></td></tr></table></figure>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2023/02/20/JavaScript-copyWithin-%E6%96%B9%E6%B3%95/" data-id="clecglmfy00008w6v0mnc951o" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
   
 </article>
-
-
-  
-
 
 </section>
         
