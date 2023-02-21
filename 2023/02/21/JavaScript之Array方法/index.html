@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>JavaScript之Array方法 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="JavaScript Array对象    方法 语法    concat（）    copyWithin() 从数组的指定位置拷贝元素到数组的另一个指定位置中   entries() 把数组变成对象   every()    fill()    filter()    find()    findIndex()    forEach()    from()    includes()    in">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JavaScript之Array方法">
+<meta property="og:url" content="http://example.com/2023/02/21/JavaScript%E4%B9%8BArray%E6%96%B9%E6%B3%95/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="JavaScript Array对象    方法 语法    concat（）    copyWithin() 从数组的指定位置拷贝元素到数组的另一个指定位置中   entries() 把数组变成对象   every()    fill()    filter()    find()    findIndex()    forEach()    from()    includes()    in">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://example.com/2023/02/21/JavaScript%E4%B9%8BArray%E6%96%B9%E6%B3%95/concat.png">
+<meta property="og:image" content="http://example.com/2023/02/21/JavaScript%E4%B9%8BArray%E6%96%B9%E6%B3%95/every.png">
+<meta property="og:image" content="http://example.com/2023/02/21/JavaScript%E4%B9%8BArray%E6%96%B9%E6%B3%95/fill.png">
+<meta property="og:image" content="http://example.com/2023/02/21/JavaScript%E4%B9%8BArray%E6%96%B9%E6%B3%95/filter.png">
+<meta property="og:image" content="http://example.com/2023/02/21/JavaScript%E4%B9%8BArray%E6%96%B9%E6%B3%95/find.png">
+<meta property="og:image" content="http://example.com/2023/02/21/JavaScript%E4%B9%8BArray%E6%96%B9%E6%B3%95/findIndex.png">
+<meta property="og:image" content="http://example.com/2023/02/21/JavaScript%E4%B9%8BArray%E6%96%B9%E6%B3%95/forEach.png">
+<meta property="og:image" content="http://example.com/2023/02/21/JavaScript%E4%B9%8BArray%E6%96%B9%E6%B3%95/from.png">
+<meta property="og:image" content="http://example.com/2023/02/21/JavaScript%E4%B9%8BArray%E6%96%B9%E6%B3%95/includes.png">
+<meta property="og:image" content="http://example.com/2023/02/21/JavaScript%E4%B9%8BArray%E6%96%B9%E6%B3%95/indexOf.png">
+<meta property="og:image" content="http://example.com/2023/02/21/JavaScript%E4%B9%8BArray%E6%96%B9%E6%B3%95/join.png">
+<meta property="og:image" content="http://example.com/2023/02/21/JavaScript%E4%B9%8BArray%E6%96%B9%E6%B3%95/keys.png">
+<meta property="og:image" content="http://example.com/2023/02/21/JavaScript%E4%B9%8BArray%E6%96%B9%E6%B3%95/lastIndexOf.png">
+<meta property="og:image" content="http://example.com/2023/02/21/JavaScript%E4%B9%8BArray%E6%96%B9%E6%B3%95/map.png">
+<meta property="og:image" content="http://example.com/2023/02/21/JavaScript%E4%B9%8BArray%E6%96%B9%E6%B3%95/pop.png">
+<meta property="og:image" content="http://example.com/2023/02/21/JavaScript%E4%B9%8BArray%E6%96%B9%E6%B3%95/push.png">
+<meta property="og:image" content="http://example.com/2023/02/21/JavaScript%E4%B9%8BArray%E6%96%B9%E6%B3%95/reduce.png">
+<meta property="og:image" content="http://example.com/2023/02/21/JavaScript%E4%B9%8BArray%E6%96%B9%E6%B3%95/reverse.png">
+<meta property="og:image" content="http://example.com/2023/02/21/JavaScript%E4%B9%8BArray%E6%96%B9%E6%B3%95/shiift.png">
+<meta property="og:image" content="http://example.com/2023/02/21/JavaScript%E4%B9%8BArray%E6%96%B9%E6%B3%95/slice.png">
+<meta property="og:image" content="http://example.com/2023/02/21/JavaScript%E4%B9%8BArray%E6%96%B9%E6%B3%95/some.png">
+<meta property="og:image" content="http://example.com/2023/02/21/JavaScript%E4%B9%8BArray%E6%96%B9%E6%B3%95/sort.png">
+<meta property="og:image" content="http://example.com/2023/02/21/JavaScript%E4%B9%8BArray%E6%96%B9%E6%B3%95/splice.png">
+<meta property="og:image" content="http://example.com/2023/02/21/JavaScript%E4%B9%8BArray%E6%96%B9%E6%B3%95/toString.png">
+<meta property="og:image" content="http://example.com/2023/02/21/JavaScript%E4%B9%8BArray%E6%96%B9%E6%B3%95/unshift.png">
+<meta property="article:published_time" content="2023-02-21T02:26:45.000Z">
+<meta property="article:modified_time" content="2023-02-21T03:27:08.715Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/2023/02/21/JavaScript%E4%B9%8BArray%E6%96%B9%E6%B3%95/concat.png">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 5.4.2"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-JavaScript之Array方法" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2023/02/21/JavaScript%E4%B9%8BArray%E6%96%B9%E6%B3%95/" class="article-date">
+  <time datetime="2023-02-21T02:26:45.000Z" itemprop="datePublished">2023-02-21</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      JavaScript之Array方法
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>JavaScript Array对象</p>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>语法</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>concat（）</td>
+<td><img src="/2023/02/21/JavaScript%E4%B9%8BArray%E6%96%B9%E6%B3%95/concat.png" class="" title="concat"></td>
+</tr>
+<tr>
+<td>copyWithin()</td>
+<td>从数组的指定位置拷贝元素到数组的另一个指定位置中</td>
+</tr>
+<tr>
+<td>entries()</td>
+<td>把数组变成对象</td>
+</tr>
+<tr>
+<td>every()</td>
+<td><img src="/2023/02/21/JavaScript%E4%B9%8BArray%E6%96%B9%E6%B3%95/every.png" class="" title="every"></td>
+</tr>
+<tr>
+<td>fill()</td>
+<td><img src="/2023/02/21/JavaScript%E4%B9%8BArray%E6%96%B9%E6%B3%95/fill.png" class="" title="fill"></td>
+</tr>
+<tr>
+<td>filter()</td>
+<td><img src="/2023/02/21/JavaScript%E4%B9%8BArray%E6%96%B9%E6%B3%95/filter.png" class="" title="filter"></td>
+</tr>
+<tr>
+<td>find()</td>
+<td><img src="/2023/02/21/JavaScript%E4%B9%8BArray%E6%96%B9%E6%B3%95/find.png" class="" title="find"></td>
+</tr>
+<tr>
+<td>findIndex()</td>
+<td><img src="/2023/02/21/JavaScript%E4%B9%8BArray%E6%96%B9%E6%B3%95/findIndex.png" class="" title="findIndex"></td>
+</tr>
+<tr>
+<td>forEach()</td>
+<td><img src="/2023/02/21/JavaScript%E4%B9%8BArray%E6%96%B9%E6%B3%95/forEach.png" class="" title="forEach"></td>
+</tr>
+<tr>
+<td>from()</td>
+<td><img src="/2023/02/21/JavaScript%E4%B9%8BArray%E6%96%B9%E6%B3%95/from.png" class="" title="from"></td>
+</tr>
+<tr>
+<td>includes()</td>
+<td><img src="/2023/02/21/JavaScript%E4%B9%8BArray%E6%96%B9%E6%B3%95/includes.png" class="" title="includes"></td>
+</tr>
+<tr>
+<td>indexOf()</td>
+<td><img src="/2023/02/21/JavaScript%E4%B9%8BArray%E6%96%B9%E6%B3%95/indexOf.png" class="" title="indexOf"> 查找数组首次出现的位置</td>
+</tr>
+<tr>
+<td>isArray()</td>
+<td>Array.isArray(obj)</td>
+</tr>
+<tr>
+<td>join()</td>
+<td><img src="/2023/02/21/JavaScript%E4%B9%8BArray%E6%96%B9%E6%B3%95/join.png" class="" title="join"></td>
+</tr>
+<tr>
+<td>keys()</td>
+<td><img src="/2023/02/21/JavaScript%E4%B9%8BArray%E6%96%B9%E6%B3%95/keys.png" class="" title="keys"></td>
+</tr>
+<tr>
+<td>lastIndexOf()</td>
+<td><img src="/2023/02/21/JavaScript%E4%B9%8BArray%E6%96%B9%E6%B3%95/lastIndexOf.png" class="" title="lastIndexOf"></td>
+</tr>
+<tr>
+<td>map()</td>
+<td><img src="/2023/02/21/JavaScript%E4%B9%8BArray%E6%96%B9%E6%B3%95/map.png" class="" title="map"></td>
+</tr>
+<tr>
+<td>pop()</td>
+<td><img src="/2023/02/21/JavaScript%E4%B9%8BArray%E6%96%B9%E6%B3%95/pop.png" class="" title="pop"></td>
+</tr>
+<tr>
+<td>push()</td>
+<td><img src="/2023/02/21/JavaScript%E4%B9%8BArray%E6%96%B9%E6%B3%95/push.png" class="" title="push"></td>
+</tr>
+<tr>
+<td>reduce()</td>
+<td><img src="/2023/02/21/JavaScript%E4%B9%8BArray%E6%96%B9%E6%B3%95/reduce.png" class="" title="reduce"></td>
+</tr>
+<tr>
+<td>reduceRight()</td>
+<td>功能和 reduce() 功能是一样的，不同的是 reduceRight() 从数组的末尾向前将数组中的数组项做累加</td>
+</tr>
+<tr>
+<td>reverse()</td>
+<td><img src="/2023/02/21/JavaScript%E4%B9%8BArray%E6%96%B9%E6%B3%95/reverse.png" class="" title="reverse"></td>
+</tr>
+<tr>
+<td>shiift()</td>
+<td><img src="/2023/02/21/JavaScript%E4%B9%8BArray%E6%96%B9%E6%B3%95/shiift.png" class="" title="shiift"></td>
+</tr>
+<tr>
+<td>slice()</td>
+<td><img src="/2023/02/21/JavaScript%E4%B9%8BArray%E6%96%B9%E6%B3%95/slice.png" class="" title="slice"></td>
+</tr>
+<tr>
+<td>some()</td>
+<td><img src="/2023/02/21/JavaScript%E4%B9%8BArray%E6%96%B9%E6%B3%95/some.png" class="" title="some"></td>
+</tr>
+<tr>
+<td>sort()</td>
+<td><img src="/2023/02/21/JavaScript%E4%B9%8BArray%E6%96%B9%E6%B3%95/sort.png" class="" title="sort"></td>
+</tr>
+<tr>
+<td>splice()</td>
+<td><img src="/2023/02/21/JavaScript%E4%B9%8BArray%E6%96%B9%E6%B3%95/splice.png" class="" title="splice"></td>
+</tr>
+<tr>
+<td>toString()</td>
+<td><img src="/2023/02/21/JavaScript%E4%B9%8BArray%E6%96%B9%E6%B3%95/toString.png" class="" title="toString"></td>
+</tr>
+<tr>
+<td>unshift()</td>
+<td><img src="/2023/02/21/JavaScript%E4%B9%8BArray%E6%96%B9%E6%B3%95/unshift.png" class="" title="unshift"></td>
+</tr>
+<tr>
+<td>valueOf()</td>
+<td>把数组变成对象</td>
+</tr>
+</tbody></table>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/02/21/JavaScript%E4%B9%8BArray%E6%96%B9%E6%B3%95/" data-id="cledp4hqh0000ks6vc0sje8qv" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2023/02/20/JavaScript%E4%B9%8B%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E7%9A%84%E8%AF%A6%E7%BB%86%E4%BB%8B%E7%BB%8D/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">JavaScript之正则表达式的详细介绍</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/02/">February 2023</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2023/02/21/JavaScript%E4%B9%8BArray%E6%96%B9%E6%B3%95/">JavaScript之Array方法</a>
+          </li>
+        
+          <li>
+            <a href="/2023/02/20/JavaScript%E4%B9%8B%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E7%9A%84%E8%AF%A6%E7%BB%86%E4%BB%8B%E7%BB%8D/">JavaScript之正则表达式的详细介绍</a>
+          </li>
+        
+          <li>
+            <a href="/2023/02/20/JavaScript-copyWithin-%E6%96%B9%E6%B3%95/">JavaScript copyWithin()方法</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2023 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>
