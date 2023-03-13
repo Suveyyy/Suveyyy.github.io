@@ -64,6 +64,185 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-JavaScript之String" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2023/03/13/JavaScript%E4%B9%8BString/" class="article-date">
+  <time datetime="2023-03-13T08:07:07.000Z" itemprop="datePublished">2023-03-13</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2023/03/13/JavaScript%E4%B9%8BString/">JavaScript之String</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>const str&#x3D; “hello world!”</p>
+<table>
+<thead>
+<tr>
+<th>语法</th>
+<th>返回值</th>
+<th>示例</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>string.charAt(index)</td>
+<td>String</td>
+<td><code>str.charAt(4) // o</code></td>
+<td>返回指定位置的字符</td>
+</tr>
+<tr>
+<td>string.charCodeAt(index)</td>
+<td>Number</td>
+<td><code>str.charCodeAt(4) //111</code></td>
+<td>指定字符的 Unicode 编码</td>
+</tr>
+<tr>
+<td>string.concat(str1,str2…)</td>
+<td>String</td>
+<td><code>&quot;HELLO&quot;.concat(&quot;world&quot;) // HELLOworld</code></td>
+<td>连接连个或多个字符串</td>
+</tr>
+<tr>
+<td>String.fromCharCode(n1,n2…)</td>
+<td>String</td>
+<td><code>String.fromCharCode(72,69) // HE</code></td>
+<td>将 Unicode 编码转换为一个字符串</td>
+</tr>
+<tr>
+<td>string.indexOf(searchvalue,start)</td>
+<td>Number</td>
+<td><code>str.indexOf(&quot;hello&quot;) // 0</code></td>
+<td>查找字符串</td>
+</tr>
+<tr>
+<td>string.includes(searchvalue,start)</td>
+<td>true&#x2F;false</td>
+<td><code>str.includes(&quot;hello&quot;) // true</code></td>
+<td>判断是否包含指定字符</td>
+</tr>
+<tr>
+<td>string.lastIndexOf(searchvalue,start)</td>
+<td>Number</td>
+<td><code>str.lastIndexOf(&quot;world&quot;) // 6</code></td>
+<td>查找最后出现的位置</td>
+</tr>
+<tr>
+<td>string.match(regexp)</td>
+<td>Array</td>
+<td><code>str.match(/l/g) // [ &#39;l&#39;, &#39;l&#39;, &#39;l&#39; ]</code></td>
+<td>检索字符串内指定字符</td>
+</tr>
+<tr>
+<td>string.repeat(count)</td>
+<td>string</td>
+<td><code>str.repeat(2) // hello wroldhello world</code></td>
+<td>字符串复制指定次数</td>
+</tr>
+<tr>
+<td>string.replace(searchvalue，newvalue)</td>
+<td>string</td>
+<td><code>str.repalce(&quot;hello&quot;, &quot;hi&quot;) // hi world</code></td>
+<td>替换指定字符</td>
+</tr>
+<tr>
+<td>string.search(index)</td>
+<td>Number&#x2F;-1</td>
+<td><code>str.search(&quot;ll&quot;) // 2</code></td>
+<td>查找指定字符</td>
+</tr>
+<tr>
+<td>string.slice(start,end)</td>
+<td>string</td>
+<td><code>str.slice(1，5) // ello</code></td>
+<td>提取字符串片段</td>
+</tr>
+<tr>
+<td>string.split(separator, limit)</td>
+<td>Array</td>
+<td><code>str.split(&quot; &quot;) // [ &#39;hello&#39;, &#39;world&#39; ]</code></td>
+<td>分割字符串返回数组</td>
+</tr>
+<tr>
+<td>string.startWith(searchvalue, start)</td>
+<td>true&#x2F;false</td>
+<td><code>str.startWith(&quot;l&quot;, 2) // true</code></td>
+<td>检测是否以指定字符串开始</td>
+</tr>
+<tr>
+<td>string.substr(start, length)</td>
+<td>string</td>
+<td><code>str.substr(2, 3) // llo</code></td>
+<td>截取字符串</td>
+</tr>
+<tr>
+<td>string.substring(from, to)</td>
+<td>string</td>
+<td><code>str.substring(2, 3) // l</code></td>
+<td>截取两个下标之间的字符串</td>
+</tr>
+<tr>
+<td>string.toLowerCase()</td>
+<td>string</td>
+<td><code>&quot;HELLO&quot;.toLowerCase() // hello</code></td>
+<td>把字符串转换为小写</td>
+</tr>
+<tr>
+<td>string.toUpperCase()</td>
+<td>string</td>
+<td><code>str.toUpperCase() // l</code></td>
+<td>把字符串转换为大写</td>
+</tr>
+<tr>
+<td>string.trim()</td>
+<td>string</td>
+<td>-</td>
+<td>删除字符串头尾空白字符</td>
+</tr>
+<tr>
+<td>string.toLocaleLowerCase()</td>
+<td>string</td>
+<td>-</td>
+<td>根据本地主机的语言环境把字符串转换为小写</td>
+</tr>
+<tr>
+<td>string.toLocaleUpperCase()</td>
+<td>string</td>
+<td>-</td>
+<td>根据本地主机的语言环境把字符串转换为大写</td>
+</tr>
+<tr>
+<td>string.toString()</td>
+<td>string</td>
+<td>-</td>
+<td>返回一个字符串</td>
+</tr>
+</tbody></table>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/03/13/JavaScript%E4%B9%8BString/" data-id="clf6jksp00000pk6vejw2er0a" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-JavaScript之Number" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2023/03/13/JavaScript%E4%B9%8BNumber/" class="article-date">
@@ -894,6 +1073,10 @@
       <ul>
         
           <li>
+            <a href="/2023/03/13/JavaScript%E4%B9%8BString/">JavaScript之String</a>
+          </li>
+        
+          <li>
             <a href="/2023/03/13/JavaScript%E4%B9%8BNumber/">JavaScript之Number</a>
           </li>
         
@@ -907,10 +1090,6 @@
         
           <li>
             <a href="/2023/02/21/JavaScript%E4%B9%8BArray%E6%96%B9%E6%B3%95/">JavaScript之Array方法</a>
-          </li>
-        
-          <li>
-            <a href="/2023/02/20/JavaScript%E4%B9%8B%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E7%9A%84%E8%AF%A6%E7%BB%86%E4%BB%8B%E7%BB%8D/">JavaScript之正则表达式的详细介绍</a>
           </li>
         
       </ul>
