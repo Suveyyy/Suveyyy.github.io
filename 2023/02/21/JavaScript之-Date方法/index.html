@@ -7,13 +7,15 @@
   
   <title>JavaScript之 Date方法 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="article">
+  <meta name="description" content="JavaScript 之 Date 对象    语法 返回值 描述    getDate()、getUTCDate()、setDate()、setUTCDate() 1-31    getDay()、getUTCDay() 0-6    getFullYear()、getUTCFullYear()、setFullYear()、setUTCFullYear() 四位数字    getHours()、">
+<meta property="og:type" content="article">
 <meta property="og:title" content="JavaScript之 Date方法">
 <meta property="og:url" content="http://example.com/2023/02/21/JavaScript%E4%B9%8B-Date%E6%96%B9%E6%B3%95/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="JavaScript 之 Date 对象    语法 返回值 描述    getDate()、getUTCDate()、setDate()、setUTCDate() 1-31    getDay()、getUTCDay() 0-6    getFullYear()、getUTCFullYear()、setFullYear()、setUTCFullYear() 四位数字    getHours()、">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2023-02-21T03:39:45.000Z">
-<meta property="article:modified_time" content="2023-02-21T03:39:45.966Z">
+<meta property="article:modified_time" content="2023-03-13T02:48:20.802Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
   
@@ -86,7 +88,88 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <p>JavaScript 之 Date 对象</p>
+<table>
+<thead>
+<tr>
+<th>语法</th>
+<th>返回值</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>getDate()、getUTCDate()、setDate()、setUTCDate()</td>
+<td>1-31</td>
+<td></td>
+</tr>
+<tr>
+<td>getDay()、getUTCDay()</td>
+<td>0-6</td>
+<td></td>
+</tr>
+<tr>
+<td>getFullYear()、getUTCFullYear()、setFullYear()、setUTCFullYear()</td>
+<td>四位数字</td>
+<td></td>
+</tr>
+<tr>
+<td>getHours()、getUTCHours()、getHours()、getUTCHours()</td>
+<td>0-23</td>
+<td></td>
+</tr>
+<tr>
+<td>getMilliseconds()、getUTCMilliseconds()、setMilliseconds()、setUTCMilliseconds()</td>
+<td>0-999</td>
+<td></td>
+</tr>
+<tr>
+<td>getMinutes()、getUTCMinutes()、setMinutes()、setUTCMinutes()</td>
+<td>0-59</td>
+<td></td>
+</tr>
+<tr>
+<td>getSeconds()、getUTCSeconds()、setSeconds()、setUTCSeconds()</td>
+<td>0-59</td>
+<td></td>
+</tr>
+<tr>
+<td>getTime()、UTC()、setTime()、parse()</td>
+<td>number</td>
+<td></td>
+</tr>
+<tr>
+<td>toString()、toDateString()、toTimeString()</td>
+<td>String</td>
+<td>把 Date 对象&#x2F;日期部分&#x2F;时间部分转换为字符串</td>
+</tr>
+<tr>
+<td>toLocaleString()、toLocaleDateString()、toLocaleTimeString()</td>
+<td>String</td>
+<td>根据本地时间把 Date 对象转换为字符（同 toString）</td>
+</tr>
+<tr>
+<td>toISOString()</td>
+<td>String</td>
+<td>使用 ISO 标准将 Date 对象转换为字符串</td>
+</tr>
+<tr>
+<td>toJSON()</td>
+<td>String</td>
+<td>将 Date 对象转换为字符串，并格式化为 JSON 数据格式</td>
+</tr>
+<tr>
+<td>toUTCString()</td>
+<td>String</td>
+<td>根据世界时 (UTC) 把 Date 对象转换为字符串</td>
+</tr>
+<tr>
+<td>valueOf()</td>
+<td>String</td>
+<td>返回 Date 对象的原始值</td>
+</tr>
+</tbody></table>
+<p>UTC: 世界时<br>parse(): 返回 1970 年 1 月 1 日午夜到指定日期（字符串）的毫秒数</p>
+
       
     </div>
     <footer class="article-footer">
